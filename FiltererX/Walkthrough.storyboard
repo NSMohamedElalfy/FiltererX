@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="WJr-kZ-gft">
+            <objects>
+                <viewController storyboardIdentifier="WalkContainer" id="3lg-WZ-Wdk" customClass="BWWalkthroughViewController" customModule="FiltererX" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a4C-jM-0A1"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Lt-cW-w4y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lCz-C1-52q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwL-JZ-9gJ">
+                                <rect key="frame" x="516" y="516" width="64" height="64"/>
+                                <state key="normal" image="next"/>
+                                <connections>
+                                    <action selector="nextPage" destination="3lg-WZ-Wdk" eventType="touchUpInside" id="k6r-F4-Ezd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gf-uj-BEK">
+                                <rect key="frame" x="516" y="28" width="64" height="64"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="close:" destination="3lg-WZ-Wdk" eventType="touchUpInside" id="yWM-hT-mEk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIL-jp-gfB">
+                                <rect key="frame" x="20" y="516" width="64" height="64"/>
+                                <state key="normal" image="previous"/>
+                                <connections>
+                                    <action selector="prevPage" destination="3lg-WZ-Wdk" eventType="touchUpInside" id="cD7-kQ-JYZ"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Chz-x3-XEA">
+                                <rect key="frame" x="281" y="461" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fIL-jp-gfB" firstAttribute="leading" secondItem="lCz-C1-52q" secondAttribute="leadingMargin" id="Et0-Ai-M0J"/>
+                            <constraint firstItem="4Lt-cW-w4y" firstAttribute="top" secondItem="fIL-jp-gfB" secondAttribute="bottom" constant="20" id="XdZ-VJ-Yjy"/>
+                            <constraint firstItem="SwL-JZ-9gJ" firstAttribute="trailing" secondItem="lCz-C1-52q" secondAttribute="trailingMargin" id="aHQ-QS-LEy"/>
+                            <constraint firstItem="3gf-uj-BEK" firstAttribute="top" secondItem="a4C-jM-0A1" secondAttribute="bottom" constant="8" id="gSU-gx-sea"/>
+                            <constraint firstItem="3gf-uj-BEK" firstAttribute="trailing" secondItem="lCz-C1-52q" secondAttribute="trailingMargin" id="khR-Yd-AmB"/>
+                            <constraint firstItem="Chz-x3-XEA" firstAttribute="centerY" secondItem="lCz-C1-52q" secondAttribute="centerY" constant="179.5" id="lUK-dr-m6W"/>
+                            <constraint firstItem="Chz-x3-XEA" firstAttribute="centerX" secondItem="lCz-C1-52q" secondAttribute="centerX" id="vaP-RW-egJ"/>
+                            <constraint firstItem="4Lt-cW-w4y" firstAttribute="top" secondItem="SwL-JZ-9gJ" secondAttribute="bottom" constant="20" id="xci-Xf-Mcc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="3gf-uj-BEK" id="2Qc-H2-rmF"/>
+                        <outlet property="nextButton" destination="SwL-JZ-9gJ" id="Nl8-nd-bTM"/>
+                        <outlet property="pageControl" destination="Chz-x3-XEA" id="tAz-2N-4cS"/>
+                        <outlet property="prevButton" destination="fIL-jp-gfB" id="BxH-4M-E0H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBZ-TF-kfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="345"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="InH-UB-aNg">
+            <objects>
+                <viewController storyboardIdentifier="WalkPage1" id="kVU-mi-NgK" customClass="BWWalkthroughPageViewController" customModule="FiltererX" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vdV-VX-mbc"/>
+                        <viewControllerLayoutGuide type="bottom" id="jgQ-Sc-EVh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2iD-VU-a0O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2N-Cx-nAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247" y="345"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="iLU-s3-QWD">
+            <objects>
+                <viewController storyboardIdentifier="WalkPage2" id="5bQ-Nt-z3y" customClass="BWWalkthroughPageViewController" customModule="FiltererX" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nIo-mB-GFq"/>
+                        <viewControllerLayoutGuide type="bottom" id="LTr-Qj-akE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Tz-y1-3Or">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1U-No-hOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949" y="345"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="594-MK-lgi">
+            <objects>
+                <viewController storyboardIdentifier="WalkPage3" id="yLv-Yv-q5x" customClass="BWWalkthroughPageViewController" customModule="FiltererX" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S0U-I9-0sb"/>
+                        <viewControllerLayoutGuide type="bottom" id="LyW-z7-Zl2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qdX-16-cRr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAT-IC-UGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2646" y="345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="64" height="64"/>
+        <image name="next" width="64" height="64"/>
+        <image name="previous" width="64" height="64"/>
+    </resources>
+</document>
